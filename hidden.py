@@ -32,8 +32,8 @@ def readonly():
             "pass": "readonly_password"}
 
 def denokv():
-    return {"token" : "42",
-            "url": "https://kv-admin-api.pg4e.com"}
+    return {"token" : "2604_823cae:f94049",
+            "url": "https://nyeung1987-deno-kv-adm-93.deno.dev"}
 
 # Return a psycopg2 connection string
 
