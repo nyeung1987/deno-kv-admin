@@ -33,7 +33,7 @@ def readonly():
 
 def denokv():
     return {"token" : "2604_823cae:f94049",
-            "url": "https://nyeung1987-deno-kv-adm-93.deno.dev"}
+            "url": "https://nyeung1987-deno-kv-adm-89.deno.dev"}
 
 # Return a psycopg2 connection string
 
