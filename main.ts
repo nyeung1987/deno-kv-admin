@@ -138,7 +138,7 @@ function checkToken(c) {
 // If you are putting up your own server you can either delete this
 // CRON entry or change it to be once per month with "0 0 1 * *" as
 // the CRON string
-Deno.cron("Hourly DB Reset", "0 * * * *", async () => {
+// Deno.cron("Hourly DB Reset", "0 * * * *", async () => {
   const ckv = await Deno.openKv();
   const iter = await ckv.list({ prefix: [] });
   const keys = [];
