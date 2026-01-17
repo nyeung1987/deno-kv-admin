@@ -67,7 +67,7 @@ showurl = True
 url = secrets['url'] + '/dump';
 print('Verifying connection to', url)
 try:
-    with urllib.request.urlopen(url, timeout=30) as response:
+    with urllib.request.urlopen(url, timeout=120) as response:
         text = response.read().decode('utf-8')
         status = response.status
 except Exception as e:
@@ -132,7 +132,7 @@ while True:
 
         req = urllib.request.Request(url, data=body, headers=headers, method='POST')
         try:
-            with urllib.request.urlopen(req, timeout=30) as response:
+            with urllib.request.urlopen(req, timeout=120) as response:
                 text = response.read().decode('utf-8')
                 status = response.status
                 prettyjson(status, text)
@@ -152,7 +152,7 @@ while True:
         if ( showurl ) : print(url)
 
         try:
-            with urllib.request.urlopen(url, timeout=30) as response:
+            with urllib.request.urlopen(url, timeout=120) as response:
                 text = response.read().decode('utf-8')
                 status = response.status
                 print(status)
@@ -181,7 +181,7 @@ while True:
 
         req = urllib.request.Request(url, method='DELETE')
         try:
-            with urllib.request.urlopen(req, timeout=30) as response:
+            with urllib.request.urlopen(req, timeout=120) as response:
                 text = response.read().decode('utf-8')
                 status = response.status
                 print('Status:', status)
